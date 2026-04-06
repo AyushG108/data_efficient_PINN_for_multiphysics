@@ -13,9 +13,11 @@ A PINN framework is employed to reconstruct temperature and flow fields with ext
 
 ![Geometry](geometry.png)
 
+
+
 ## Network Architecture
 
-![Network Architecture](architecture.png)
+![Network Architecture](arch.png)
 
 ## Governing Equations
 
@@ -95,8 +97,8 @@ where $\alpha$ is a hyperparameter (typically 0.12) controlling the strength of 
 
 | Case | Ra | Re | Pr | Error |
 |------|----|----|----|-------|
-| Natural convection | 10³ | 10 | 0.71 | < 1% |
-| Natural convection | 10⁴ | 10 | 0.71 | < 6.5% |
+| Mixed convection | 10³ | 10 | 0.71 | < 1% |
+| Mixed convection | 10⁴ | 10 | 0.71 | < 6.5% |
 | Mixed convection | 10⁵ | 10 | 0.71 | < 10% |
 
 ## Requirements
