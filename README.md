@@ -28,19 +28,13 @@ $$
 ### x-momentum
 
 $$
-u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + \frac{1}{\text{Re}} \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)
+u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{\partial p}{\partial x} + \frac{1}{\text{Re}} \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)
 $$
 
 ### y-momentum (with buoyancy term)
 
 $$
-u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial y} + \frac{1}{\text{Re}} \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} \right) + \frac{\text{Gr}}{\text{Re}^2} T
-$$
-
-where the Grashof number Gr and Rayleigh number Ra are related by:
-
-$$
-\text{Ra} = \text{Gr} \cdot \text{Pr} = \frac{g \beta \Delta T L^3}{\nu \alpha}
+u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} = -\frac{\partial p}{\partial y} + \frac{1}{\text{Re}} \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} \right) + \frac{\text{Ra}}{\text{Re}^2 \cdot \text{Pr}} \, T
 $$
 
 ### Energy Equation (Heat Transfer)
@@ -77,7 +71,7 @@ $$
 
 ## Adaptive Loss Weighting: GradNorm
 
-GradNorm balances multiple loss terms by making their gradient magnitudes equal. The idea is simple: if one loss is dominating training, its weight gets reduced.
+GradNorm balances multiple loss terms by making their gradient magnitudes equal.
 
 ### How it works:
 
